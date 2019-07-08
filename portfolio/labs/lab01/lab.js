@@ -2,7 +2,7 @@
 
 */
 
-/*
+
 function start(e) {
     var name = [
         {
@@ -38,7 +38,7 @@ function start(e) {
         nameEl.innerHTML += '<br>';
     }
 }
-*/
+
 
 
 /*
@@ -49,4 +49,4 @@ document.addEventListener(event, function, useCapture)
 true - The event handler is executed in the capturing phase
 false- Default. The event handler is executed in the bubbling phase
 */
-//window.addEventListener( "load", start, false );
+window.addEventListener( "load", start, false );
