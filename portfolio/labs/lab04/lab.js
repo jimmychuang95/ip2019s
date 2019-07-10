@@ -1,10 +1,10 @@
 
-//隨機數
+//從minN到maxN的隨機整數
 function getRandom(minN, maxN) {
     return Math.floor( Math.random() * (maxN - minN + 1) ) + minN;
 }
 
-//16 個隨機數列
+//從minNum到maxNum的不重複隨機數列
 function getRandomArray(minNum, maxNum, n) {
     var rdmArray = [];
     var rdm = 0;
@@ -82,22 +82,18 @@ $(function() {
                 var flipTwo = $('[src*="ace"][type = "clickable"]').eq(1).attr('src');
 
                 if (flipOne == flipTwo) {
-                    $('[src*="ace"][type = "clickable"]').animate({opacity: 0}, 300, function() {
+                    $('[src*="ace"][type = "clickable"]').animate({opacity: 0}, 400, function() {
                         $('[src*= "ace"][type = "clickable"]').addClass('done').attr('type', 'non_clickable');
                     });
                 }
                 else {
                     setTimeout(function(){
                         $('[src*= "ace"][type = "clickable"]').attr('src', 'joker-card.svg')
-                    }, 500);
+                    }, 900);
                 }
-
-            flipCards = 0;
+                flipCards = 0;
             }
         }
     })
 
-    if ($('table img*').attr('class') == 'done') {
-        alert('Congratulations!')
-    }
 })
